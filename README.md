@@ -1,5 +1,8 @@
 # StateEmitter
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/96f5ff35937c410aa3a3776adba79027)](https://www.codacy.com/app/konfirm/node-state-emitter?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=konfirm/node-state-emitter&amp;utm_campaign=Badge_Grade)
+[![Build Status](https://travis-ci.org/konfirm/node-state-emitter.svg?branch=master)](https://travis-ci.org/konfirm/node-state-emitter)
+
 Create an Emitter with a fixed set of states which allows to listen for and emit on either the index and/or string/Symbol value;
 
 ## Getting Started
