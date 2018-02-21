@@ -5,6 +5,7 @@ const StateEmitter = source('state-emitter');
 function prepare(val) {
 	return {
 		val,
+		//  eslint-disable-next-line no-magic-numbers
 		one: new StateEmitter(val.slice(0, -1)),
 		two: new StateEmitter(val.slice(1)),
 	};
@@ -129,6 +130,7 @@ describe('StateEmitter', () => {
 	});
 
 	describe('EventEmitter inherited methods', () => Object.keys(spec)
+		//  eslint-disable-next-line max-statements
 		.forEach((key) => it(key, (next) => {
 			const { val, one, two } = prepare(spec[key]);
 			const collect = [];
@@ -145,7 +147,9 @@ describe('StateEmitter', () => {
 
 			one.on(0, () => collect.push('one.on.0'));
 			one.on(val[0], () => collect.push('one.on.val[0]'));
+			//  eslint-disable-next-line no-magic-numbers
 			expect(one.listeners(0)).to.be.length(4);
+			//  eslint-disable-next-line no-magic-numbers
 			expect(one.listeners(val[0])).to.be.length(4);
 			expect(one.listeners(0)).to.equal(one.listeners(val[0]));
 
@@ -173,6 +177,7 @@ describe('StateEmitter', () => {
 			listeners.push(...one.listeners(0));
 
 			one.removeListener(val[0], listeners.pop());
+			//  eslint-disable-next-line no-magic-numbers
 			expect(one.listeners(0)).to.be.length(3);
 			one.removeListener(0, listeners.pop());
 			expect(one.listeners(val[0])).to.be.length(2);
@@ -198,8 +203,10 @@ describe('StateEmitter', () => {
 			two.prependListener(0, (...args) => collect.push(...[ 'two.prependListener.0' ].concat(args)));
 			two.prependOnceListener(val[1], () => collect.push('two.prependOnceListener.val[1]'));
 
+			//  eslint-disable-next-line no-magic-numbers
 			expect(two.listeners(0)).to.be.length(4);
 			expect(two.listeners(1)).to.be.length(0);
+			//  eslint-disable-next-line no-magic-numbers
 			expect(two.listeners(val[1])).to.be.length(4);
 			expect(two.listeners(val[2])).to.be.length(0);
 			expect(two.listeners(0)).to.equal(two.listeners(val[1]));
@@ -227,7 +234,9 @@ describe('StateEmitter', () => {
 				'two.emit.arg.4',
 			]);
 
-			two.once(1, () => { });
+			two.once(1, () => {
+				//  noop
+			});
 			expect(two.listeners(0)).to.be.length(1);
 			expect(two.listeners(1)).to.be.length(1);
 			expect(two.listeners(val[1])).to.be.length(1);
