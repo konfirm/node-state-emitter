@@ -13,7 +13,7 @@ function prepare(val) {
 describe('StateEmitter', () => {
 	const strings = [ 'foo', 'bar', 'baz' ];
 	const symbols = strings.map((value) => Symbol(value));
-	const spec = { strings, symbols };
+	const spec = { strings, symbols, mixed: [ strings[0], symbols[1], strings[2] ] };
 
 	describe('constructs', () => {
 		it('expects strings and/or symbols', (next) => {
