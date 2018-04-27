@@ -1,6 +1,6 @@
 {
   "name": "@konfirm/state-emitter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Prepare an emitter with a fixed set of states, which can be referenced by their index of string/symbol value",
   "main": "source/state-emitter.js",
   "scripts": {
