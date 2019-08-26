@@ -4,8 +4,8 @@
   "description": "Prepare an emitter with a fixed set of states, which can be referenced by their index of string/symbol value",
   "main": "source/state-emitter.js",
   "scripts": {
-    "test": "lab -vclr",
-    "test-coverage-html": "lab -clr html -o report.html"
+    "test": "./node-modules/.bin/lab -vclr",
+    "test-coverage-html": "./node-modules/.bin/lab -clr html -o report.html"
   },
   "repository": {
     "type": "git",
@@ -18,10 +18,10 @@
   "author": "Rogier Spieker <rogier@konfirm.eu>",
   "license": "MIT",
   "devDependencies": {
-    "@konfirm/labrat": "^2.0.1",
+    "@konfirm/labrat": "^2.0.2",
     "eslint-config-strict": "^14.0.1"
   },
   "dependencies": {
-    "@konfirm/is-type": "^1.0.7"
+    "@konfirm/is-type": "^1.0.8"
   }
 }
