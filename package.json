@@ -4,8 +4,8 @@
   "description": "Prepare an emitter with a fixed set of states, which can be referenced by their index of string/symbol value",
   "main": "source/state-emitter.js",
   "scripts": {
-    "test": "./node-modules/.bin/lab -vclr",
-    "test-coverage-html": "./node-modules/.bin/lab -clr html -o report.html"
+    "test": "./node_modules/.bin/lab -vclr",
+    "test-coverage-html": "./node_modules/.bin/lab -clr html -o report.html"
   },
   "repository": {
     "type": "git",
