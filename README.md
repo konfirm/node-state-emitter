@@ -8,7 +8,7 @@ Create an Emitter with a fixed set of states which allows to listen for and emit
 ## Getting Started
 
 ### Installation
-StateEmitter is scoped packages, which means both the installation and `require` (or `import`) need the scope along with the package name.
+StateEmitter is a scoped package, which means both the installation and `require` (or `import`) need the scope along with the package name.
 
 ```
 $ npm install @konfirm/state-emitter
