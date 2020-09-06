@@ -1,22 +1,24 @@
 language: node_js
+os: linux
+dist: xenial
 node_js:
-    - '7'
-    - '8'
-    - '9'
-    - '10'
-    - '11'
-    - '12'
-
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  - 13
+  - 14
 jobs:
-    include:
-        - stage: npm release
-          if: tag IS present
-          node_js: 12
-          deploy:
-              provider: npm
-              email: rogier+npm@konfirm.eu
-              on:
-                  branch: master
-                  tags: true
-              api_key:
-                  secure: b3G+DRLYRVUVbD3lSL88ZjZbSe2EZFY6K2Hg92dbQOagaXfVKp3HEMldAJQXmJD/ssyEhuQDImvo4ix6AAwJA2gYrleVLl81/8+87M4R9AMdNA4YB8QBEUBXJDMqOr0+qoPNRLAnsA5fj25HQCk1R7nObcIfmLtlRjyocDtk/7r/OVY93ApycndGogbFenVEHjWmyf/fBMrTFBY3eh24eem799iUo906+P9+7iaKCvs+HCnjpEicg12JH1Or+DGEOtVgaLlQsncZzXJPYIACOI94tIAP73hjci84XkXRAjmhvRyR1LwEaO8tP0jXyO28VzddR0zXoeyzdH0zQCfbqNOrVnbdF4GAVewDrmcAfiH41JCVyLRqDlhZbVLbbCcp8DlM5/pSArAKDXV9L668WGDxPEGE03g8uUvv/Y6YfJo0XHEqGi4KrkDutEahP8rwPA35qnlWiEPc182fFns6RaWzTeVlZydnpeKUi01Pknx2L1d/c7qrKGELX8pvfovimCZARU7FOWGUCjgJG5iBBLOYQPea+WGwat21ZGsdKOMfrPt8bhs0mkpUuQfY4sYCHkDwt36Va3maPgmYQ+h1gQ18ebrCyD9kYAgCPyjEFaZVM+jYqcIeZDhtjenqm5cqoEFpbglpJHSrmW1ze2JA0CTu+Ny8p6xlC8Xa7YTouYo=
+  include:
+    - stage: npm release
+      if: tag IS present
+      node_js: 14
+      deploy:
+        provider: npm
+        email: rogier+npm@konfirm.eu
+        on:
+          branch: master
+          tags: true
+        api_key:
+          secure: X+WffScbsAYg7J8x6H3o3WdWiHfNk8jsxcVKue8aw0TL+93lKP37EWYlGSyw3/bXIzWjM9dJoB3Ch4aplSDCihksd16wW1COprZNvxKBgYpX+YMtanoHdcEv9oF7YY9W3bnDAwMA7qDwjNHEOFphgu4nNiK+p728e1eR9L7FpbxCRBAbWBUcuOe49dpQYtDcrrO0RlUbkM6WPGHhgMeqwbt2Z3dojQUo3DVHOHA6uiPIV/k2BYtpbGf5XgNmGTfnO4Q8D5IWKXhs2gmpNi4KHZhseRV4ECLA4OJRiXPpjxQh9aXRrHRTYLY4h+yqHCIGYrg5Y5CD9VZ1xifCRgKa9/fqAKqj5KHxDnzYSgvcNbrrA0b/O/1KEGlI8XjRRMAlIxNVbfjI2bLikCwFHuGQopyb90q+V+27STUb3hHuXnqaY24rY6z32Ev7v3X57LR4sb0jtl/JU3UOJfqvsCqBZOC3TuViFVIzMcoWkWKhTcmnjBz8c+XujafLyIgd04IQl20dtPp3jm+JUUYsJYE/5C0fJRTBH7fX1DAOjevKZfAhW9Vs5PW6vSzTEMJOkCq3gwbk7zwQ8UbA1i/UMV8fntb8sCKY+d9lRn5kvFk4CNB3pAcyoWUT3Vr/X3TDom95cm7maa9auMafiLrKfRajJeBpPfa2USQDdM0UuzZgL1o=
