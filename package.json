@@ -25,6 +25,6 @@
     "eslint-config-strict": "^14.0.1"
   },
   "dependencies": {
-    "@konfirm/is-type": "^1.0.8"
+    "@konfirm/is-type": "^1.0.9"
   }
 }
